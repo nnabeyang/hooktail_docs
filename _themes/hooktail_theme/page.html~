@@ -1,0 +1,44 @@
+{#
+    basic/page.html
+    ~~~~~~~~~~~~~~~
+
+    Master template for simple pages.
+
+    :copyright: Copyright 2007-2013 by the Sphinx team, see AUTHORS.
+    :license: BSD, see LICENSE for details.
+#}
+{%- extends "layout.html" %}
+{% macro nav() %}
+	<p>
+	<a href="{{ pathto('index') }}">home</a>
+        {% if parents %}
+	{% for parent in parents %}
+	&gt;<a href="{{ parent.link | e }}">{{ parent.title }}</a>
+	{% endfor %}
+	{% endif %}
+	</p>
+{% endmacro %}
+{% macro nav_footer() %}
+        <p>
+	[<a href="{{ pathto('index') }}">home</a>]
+        {%- if prev %}
+        [<a href="{{ prev.link|e }}">{{ prev.title }}</a>]
+	{%- endif %}
+	[<a href="#header">ページの先頭</a>]
+	[<a href="{{ pathto('_sources/' + sourcename, true)|e}}">{{_('Show Source') }}</a>]
+        </p>
+{% endmacro %}
+{% block body %}
+<div class="sadoku caution">
+この記事はドキュメンテーションビルダーSphinxによって生成されたもので、『物理のかぎしっぽ』公式のものではありません。
+</div>
+<h1 class="title">{{ title }}</h1>
+<div id="headpath">
+{{ nav() }}
+</div>
+{{ body }}
+<div id="footpath" role="navigation" aria-label="bottom navigation">
+{{ nav_footer() }}
+</div>
+{% endblock %}
+

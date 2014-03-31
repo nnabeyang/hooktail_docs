@@ -1,0 +1,39 @@
+{#
+    haiku/layout.html
+    ~~~~~~~~~~~~~~~~~
+
+    Sphinx layout template for the haiku theme.
+
+    :copyright: Copyright 2007-2013 by the Sphinx team, see AUTHORS.
+    :license: BSD, see LICENSE for details.
+#}
+{%- extends "basic/layout.html" %}
+{# do not display relbars #}
+{% block relbar1 %}{% endblock %}
+{% block relbar2 %}{% endblock %}
+{% block content %}
+<div class="document">
+      <div id="header" role="banner">
+        {%- block haikuheader %}
+        {%- if theme_full_logo != "false" %}
+        <a href="{{ pathto('index') }}">
+          <img class="logo" src="{{ pathto('_static/' + logo, 1) }}" alt="物理のかぎしっぽ" width="105" height="18" title="トップページへ"/>
+        </a>
+        {%- else %}
+          {%- if logo -%}
+	<a href="http://hooktail.sub.jp"><img class="rightlogo" src="{{ pathto('_static/' + logo, 1) }}" alt="Logo"/></a>
+	  {%- endif -%}
+        {%- endif %}
+        {%- endblock %}
+      </div>
+      <div id="box" class="sadoku">
+        {#{%- if display_toc %}
+        <div id="toc">
+          <h3>{{ _('Table Of Contents') }}</h3>
+          {{ toc }}
+        </div>
+        {%- endif %}#}
+        {% block body %}{% endblock %}
+	</div>
+</div>
+{% endblock %}

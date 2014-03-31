@@ -1,0 +1,964 @@
+@charset "euc-jp";
+/*
+ *  物理のかぎしっぽ hooktailbase.css
+ *  by Sakima
+ *
+ *  基本カラー
+ *       背景色:    #ffc
+ *       赤:        #a30
+ *       黄:        #fa0
+ *       青:        #335
+ */
+
+body {
+  font-size: 100%;
+  font-family: sans-serif;
+  background-color: #668;
+  background-image: url(./wall2.jpg);
+  margin: 0em 1em;
+  padding: 0px }
+
+p, ul, dl, ol, h1, h2 {
+  line-height: 1.7em }
+
+blockquote {
+  font-size: 90%;
+  line-height: 1.6em;
+  margin-left: 3em }
+
+#box {
+  background-color: #ffc;
+  border-style: solid;
+  border-width: 0px 1px 0px 1px;
+  border-color: #000;
+  margin: 0px auto;
+  padding: 0.5em 2.2em 0.5em 2.2em }
+
+#box.sadoku {
+  background-image: url(./draft.gif) }
+
+div.caution {
+  -moz-border-radius: 10px;
+  color: #000;
+  font-weight: normal;
+  border: 1px solid #000;
+  font-family: "MS PGothic", sans-serif;
+  text-align: left;
+  font-size: 17px;
+  line-height: 1.5em;
+  padding: 10px;
+  margin: 2em 0;
+  background-color: #ff6; }
+
+/*
+ *  ヘッダ・フッタ
+ */
+#header{ 
+  background-color: #336;
+  line-height: 0.5em;
+  height: 18px;
+  color: #ccf;
+  margin: 0px;
+  padding: 0px;
+  border-style: solid;
+  border-width: 0px 1px 0px 0px;
+  border-color: #000 }
+
+#header img{ 
+  border: none;
+  margin: 0px;
+  padding: 0px }
+
+#headpath{
+  border-style: solid;
+  border-width: 0px 0px 1px 0px;
+  border-color: #000;
+  margin-bottom: 2em;
+  padding-bottom: 0.8em }
+
+div.sitemap {
+  font-size: 0.8em;
+  text-align: right;
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px }
+
+div.sitemap img {
+  padding: 0px;
+  margin: 0px }
+
+#headnavi{
+  color: #666;
+  font-size: 90%;
+  border-style: solid;
+  border-width: 0px 0px 1px 0px;
+  border-color: #000;
+  margin-top: -1.3em;
+  margin-bottom: 3em;
+  text-align: right;
+  padding-bottom: 0.7em;
+  }
+
+.footer{
+  color: #ccf;
+  font-size: 90%;
+  text-align: right;
+  background-color: #336;
+  padding: 2px;
+  padding-right: 0.5em;
+  margin: 0px;
+  font-family: "MS PGothic", sans-serif;
+  border-style: solid;
+  border-width: 0px 1px 0px 1px;
+  border-color: #000; }
+
+.footer span.author{
+  color: #fff;
+  font-weight: bold; }
+
+#footpath{
+  clear: both;
+  border-style: solid;
+  border-width: 1px 0px 0px 0px;
+  border-color: #000;
+  margin-top: 3em;
+  padding-top: 1.0em;
+  padding-bottom: 1.5em; }
+
+#footnavi{
+  color: #666;
+  font-size: 90%;
+  border-style: solid;
+  border-width: 1px 0px 0px 0px;
+  border-color: #000;
+  margin-top: 3em;
+  margin-bottom: -1.3em;
+  text-align: right;
+  padding-top: 0.7em;
+  }
+
+/*
+ *  リンク
+ */
+a:link {
+  color: #21c }
+
+a:visited {
+  color: #518 }
+
+a:active {
+  }
+
+a:hover {
+  color: #f00 }
+
+#header a, #header a:hover {
+  border: none }
+
+h1, h2 a[name] {
+  color: #fff }
+
+h3 a[name], h3 a[name] {
+  color: #335;
+  text-decoration: none }
+
+h1.title a:link, h1.title a:visited, h1.title a:hover {
+  color: #fff;
+  text-decoration: none }
+
+h1 a:link, h1 a:visited, h1 a:hover {
+  color: #fff;
+  text-decoration: none }
+h2.title a:link, h2.title a:visited, h2.title a:hover {
+  color: #fff;
+  text-decoration: none }
+
+h2 a:link, h2 a:visited, h2 a:hover {
+  color: #fff;
+  text-decoration: none }
+
+
+h3 a:link, h3 a:visited, h3 a:hover, h4 a:link, h4 a:visited, h4 a:hover {
+  color: #335;
+  text-decoration: none }
+
+/*
+ *  見出し
+ */
+h1, h2 {
+  color: #fff;
+  font-size: 140%;
+  font-family: "MS PMincho", serif;
+  font-weight: bold;
+  line-height: 1.2em;
+  border-style: solid;
+  border-width: 1px 1px 1px 1px;
+  border-color: #335;
+  background-color: #65a;
+  background-image: url(./hooktailcat-sect.gif);
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  clear: both;
+  padding: 2px 2px 2px 37px;
+  margin: 4em 0em 1.3em 0em }
+
+h1.title {
+  color: #335;
+  font-size: 250%;
+  font-family: "MS PMincho", serif;
+  text-align: center;
+  line-height: 2.5em;
+  border: none;
+  background-color: #ffc;
+  background-image: none;
+  font-weight: bold;
+  clear: both;
+  margin: 20px 0px 20px 0px;
+  padding: 0px 3px 0px 3px }
+
+h1.title img { 
+  padding: 0px;
+  margin: 0px }
+
+h2.title {
+  color: #335;
+  font-size: 250%;
+  font-family: "MS PMincho", serif;
+  text-align: center;
+  line-height: 2.5em;
+  border: none;
+  background-color: #ffc;
+  background-image: none;
+  font-weight: bold;
+  clear: both;
+  margin: 20px 0px 20px 0px;
+  padding: 0px 3px 0px 3px }
+
+h2.title img { 
+  padding: 0px;
+  margin: 0px }
+
+
+h3 {
+  color: #335;
+  font-size: 120%;
+  font-family: "MS PMincho", serif;
+  font-weight: bold;
+  border: 1px dashed #335;
+  border-width: 1px 0px 0px 0px;
+  background-image: url(./hooktailcat-subsect.gif);
+  background-position: left top;
+  background-repeat: no-repeat;
+  clear: both;
+  margin: 2.5em 0em 1em 0em;
+  padding: 15px 0px 5px 38px }
+
+h3 {
+  color: #335;
+  font-family: "MS PMincho", serif;
+  font-size: 105%;
+  font-weight: bold;
+  line-height: 1.1em;
+  background-image: url(./hooktailcat-subsubsect.gif);
+  background-position: left top;
+  background-repeat: no-repeat;
+  clear: both;
+  margin: 2em 0em 0.8em 0em;
+  padding: 8px 0px 15px 28px }
+
+h5 {
+  clear: both; }
+
+/*
+ *  コンテンツ
+ */
+div#contents {
+  border: solid 1px #65a;
+  padding: 0em 1em 0.5em 1em;
+  margin: 1.5em 2em }
+
+p.topic-title {
+  font-weight: bold }
+
+/* 重要 */
+div.important {
+  margin: 2.7em 4em 3em 2em;
+  border: none;
+  background: url(./important.jpg);
+  padding: 0px 0px 0px 36px; }
+div.important p.admonition-title {
+  visibility: hidden;
+  margin: 0px;
+  padding: 0px;
+  font-size: 0px; }
+div.important p.last {
+  background: url(./important_reverse.png) right bottom no-repeat;
+  padding: 30px 25px 10px 30px;
+  font-weight: bold; }
+
+/* 公理 */
+div.admonition-theorem {
+  margin: 2.7em 4em 3em 2em;
+  border: none;
+  background: url(./theorem.jpg);
+  padding: 0px 0px 0px 36px; }
+div.admonition-theorem p.admonition-title {
+  visibility: hidden;
+  margin: 0px;
+  padding: 0px;
+  font-size: 0px; }
+div.admonition-theorem p.last {
+  background: url(./theorem_reverse.png) right bottom no-repeat;
+  padding: 30px 25px 10px 30px;
+  font-weight: nomal; }
+
+/* 証明 */
+div.admonition-proof {
+  font-size: 90%;
+  margin: 2.7em 5em 3em 3em;
+  border: none;
+  background: url(./proof.jpg);
+  padding: 28px 0px 10px 35px; }
+div.admonition-proof p.admonition-title {
+  visibility: hidden;
+  margin: 0px;
+  padding: 0px;
+  font-size: 0px; }
+div.admonition-proof p.last {
+  }
+
+/* 登場人物 */
+div.admonition-cast {
+  font-size: 100%;
+  margin: 1em auto 2em auto;
+  width: 70%;
+  border: none;
+  background: url(./cast.jpg);
+  border: solid 1px #bbb;
+  padding: 0 10px 5px 10px; }
+div.admonition-cast p.admonition-title {
+  visibility: hidden;
+  margin: 0px;
+  padding: 0px;
+  font-size: 0px; }
+div.admonition-cast p.last {
+  }
+
+/* 定義 */
+div.admonition-definition {
+  margin: 2.7em 4em 3em 2em;
+  border: none;
+  background: url(./definition.jpg);
+  padding: 2px 0px 0px 30px; }
+div.admonition-definition p.admonition-title {
+  visibility: hidden;
+  margin: 0px;
+  padding: 0px;
+  font-size: 0px; }
+div.admonition-definition p.last {
+  background: url(./admonition_reverse.png) right bottom no-repeat;
+  padding: 30px 25px 10px 30px;
+  font-weight: nomal; }
+
+/* 公理 */
+div.admonition-axiom {
+  margin: 2.7em 4em 3em 2em;
+  border: none;
+  background: url(./axiom.jpg);
+  padding: 2px 0px 0px 30px; }
+div.admonition-axiom p.admonition-title {
+  visibility: hidden;
+  margin: 0px;
+  padding: 0px;
+  font-size: 0px; }
+div.admonition-axiom p.last {
+  background: url(./admonition_reverse.png) right bottom no-repeat;
+  padding: 30px 25px 10px 30px;
+  font-weight: nomal; }
+
+/* 補題 */
+div.admonition-lemma {
+  margin: 2.7em 4em 3em 2em;
+  border: none;
+  background: url(./lemma.jpg);
+  padding: 2px 0px 0px 30px; }
+div.admonition-lemma p.admonition-title {
+  visibility: hidden;
+  margin: 0px;
+  padding: 0px;
+  font-size: 0px; }
+div.admonition-lemma p.last {
+  background: url(./admonition_reverse.png) right bottom no-repeat;
+  padding: 30px 25px 10px 30px;
+  font-weight: nomal; }
+
+/* 命題 */
+div.admonition-proposition {
+  margin: 2.7em 4em 3em 2em;
+  border: none;
+  background: url(./proposition.jpg);
+  padding: 2px 0px 0px 30px; }
+div.admonition-proposition p.admonition-title {
+  visibility: hidden;
+  margin: 0px;
+  padding: 0px;
+  font-size: 0px; }
+div.admonition-proposition p.last {
+  background: url(./admonition_reverse.png) right bottom no-repeat;
+  padding: 30px 25px 10px 30px;
+  font-weight: nomal; }
+
+/* 仮定 */
+div.admonition-hypothesis {
+  margin: 2.7em 4em 3em 2em;
+  border: none;
+  background: url(./hypothesis.jpg);
+  padding: 2px 0px 0px 30px; }
+div.admonition-hypothesis p.admonition-title {
+  visibility: hidden;
+  margin: 0px;
+  padding: 0px;
+  font-size: 0px; }
+div.admonition-hypothesis p.last {
+  background: url(./admonition_reverse.png) right bottom no-repeat;
+  padding: 30px 25px 10px 30px;
+  font-weight: nomal; }
+
+/* 系 */
+div.admonition-corollary {
+  margin: 2.7em 4em 3em 2em;
+  border: none;
+  background: url(./corollary.jpg);
+  padding: 2px 0px 0px 30px; }
+div.admonition-corollary p.admonition-title {
+  visibility: hidden;
+  margin: 0px;
+  padding: 0px;
+  font-size: 0px; }
+div.admonition-corollary p.last {
+  background: url(./admonition_reverse.png) right bottom no-repeat;
+  padding: 30px 25px 10px 30px;
+  font-weight: nomal; }
+
+/* 解答 */
+div.admonition-answer {
+  margin: 2.7em 4em 3em 2em;
+  border: none;
+  background: url(./answer.jpg);
+  padding: 2px 0px 0px 30px; }
+div.admonition-answer p.admonition-title {
+  visibility: hidden;
+  margin: 0px;
+  padding: 0px;
+  font-size: 0px; }
+div.admonition-answer p.last {
+  background: url(./admonition_reverse.png) right bottom no-repeat;
+  padding: 30px 25px 10px 30px;
+  font-weight: nomal; }
+
+
+/*
+ *  リスト
+ */
+ul {
+  list-style-image: url(./listmark.png) }
+
+ul li {
+  line-height: 1.5em;
+  padding-left: 0.2em }
+
+ul.simple li {
+  line-height: 1.6em }
+
+ul li.shortcut {
+  list-style-image: url(./shortcut.png) }
+
+ul p {
+  line-height: 1.1em }
+
+ul span {
+  color: #c55;
+  font-size: 80% }
+
+ul.index em {
+  color: #c55;
+  font-size: 90%;
+  font-weight: normal;
+  font-family: "MS PGothic", sans-serif }
+
+ul span.text {
+  color: #444 }
+
+/* 右側に浮かせる */
+ul.fright {
+  float: right;
+  margin: 0 0 2em 0;
+  padding: 0; }
+
+ol li {
+  line-height: 1.5em;
+  margin-bottom: 0.6em }
+
+ol.upperalpha {
+  list-style-type: upper-alpha }
+
+ol.loweralpha {
+  list-style-type: lower-alpha }
+
+ol.upperroman {
+  list-style-type: upper-roman }
+
+ol.lowerroman {
+  list-style-type: lower-roman }
+
+ol li.reference {
+  line-height: 1.2em;
+  margin-bottom: 0.2em }
+
+dl {
+  margin-left: 1em }
+
+dd { 
+  margin-bottom: 0.5em }
+
+/*
+ *  図表
+ */
+div.image {
+  margin-left: -1.5em;
+  text-align: center}
+
+div.figure {
+  margin-top: 2.7em;
+  margin-bottom: 2.7em;
+  text-align: center}
+
+div.dispmath {
+  margin-left: 0em;
+  text-align: left}
+
+img {
+  border:none;
+  vertical-align: middle;
+  text-align: center;
+  behavior: url("./pngbehavior.htc");
+  margin: 1.5em 0em 1.5em 0em; }
+
+p img {
+  margin: 0; }
+
+p img.nekodaiou {
+  vertical-align: text-bottom;
+  margin: 0; }
+
+img.dispmath {
+  margin: 0.5em 0em 0.5em 2.7em; }
+
+img.inlinemath {
+  margin: 0.3em 0em 0.4em 0em;
+  vertical-align: middle }
+
+blockquote img {
+  margin-left: 0px }
+
+p.caption {
+  margin: 0px 4em 2em 4em;
+  font-size: 90% }
+
+applet {
+  margin-left: 3em }
+
+object {
+  margin-left: 3em }
+
+/*
+ *  テーブル
+ */
+table.no, td.no, tr.no{
+  border-style: none;
+  border-width: 0px;
+  border-color: #ffc;
+  padding: 0px }
+
+table.docinfo, table.docinfo th,
+table.docinfo tr, table.docinfo td {
+  border: none;
+  background-color: transparent; }
+
+table.docutils th.field-name, 
+table.docinfo th.docinfo-name {
+  border: none;
+  background-color: transparent;
+  font-weight: bold ;
+  text-align: left ;
+  white-space: nowrap ;
+  padding-left: 0 }
+
+table.docinfo td, table.docinfo th {
+  border: none;
+  background-color: transparent;
+  padding-left: 0.5em ;
+  padding-right: 0.5em ;
+  vertical-align: top }
+
+table{
+  border-collapse: collapse;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #336;
+  margin: 1em auto 1em auto }
+
+table tbody{
+  margin: 1em auto 1em auto; }
+
+td{
+  border-style: solid;
+  border-width: 1px;
+  padding: 5px 5px 5px 10px;
+  border-color: #336;
+  background-color: #fff }
+
+td.com{
+  font-family: monospace;
+  color: #c55;
+  margin-left: 0em }
+
+td span{
+  color: #c55;
+  font-size: 0.8em }
+
+th, thead td{
+  border-style: solid;
+  border-width: 1px;
+  padding: 5px;
+  border-color: #333366;
+  background-color: #ddddff;
+  white-space: nowrap }
+
+table caption{
+  font-size: 100%;
+  font-weight: bold;
+  line-height: 110%;
+  margin: 2em auto 0 auto }
+
+/*
+ *  フォント
+ */
+em {
+  font-style: normal;
+  font-weight: bold }
+
+strong {
+  color: #a30;
+  font-size: 110% }
+
+tt{ 
+  font-family: monospace }
+
+/*
+ *  pre
+ */
+pre {
+  font-size: 85%;
+  padding:0.4em 0.5em 0.4em 0.5em;
+  -moz-border-radius:11px;
+  border: none;
+  padding: 10px;
+  margin-left: 1em;
+  margin-right: 1em;
+  white-space: pre;
+  color: #000;
+  border: solid 1px #bbf;
+  background-color: #ddf; }
+
+  /*
+  Mac IEではpreにoverflowプロパティを指定すると
+  preの中身が全部消えてしまう．Mac IEは@mediaを
+  理解しないので， そこにoverflowを記入すること
+  で回避．
+  */
+  @media screen {
+    pre {
+      overflow: auto;
+      /*
+      IEでautoを使うと変になる．IEのみの拡張
+      -y, -x でvisibleに指定することで回避．
+      */
+      overflow-y:visible;
+      overflow-x:visible; }
+}
+
+pre span {
+  color: #c55 }
+
+pre.cons {  /* コンソール出力っぽく */
+  color: #fff;
+  font-size: 0.8em;
+  font-family: monospace;
+  border: none;
+  padding: 0.5em;
+  margin-left: 1em;
+  background-color: #444;
+  width: 95% }
+
+/*
+ *  水平線
+ */
+hr{
+  border: dashed 1px #335 }
+
+/*
+ *  参考文献
+ */
+#reference {
+  color: #000;
+  font-size: 100%;
+  border-style: dotted;
+  border-width: 2px;
+  border-color: #fa0;
+  background-color: #fff;
+  background-image: url(./reference.gif);
+  padding: 0.5em 1em 0.7em 1em;
+  margin: 8em 0em 1em 0em }
+
+#reference h2, #reference h2:before {
+  color: #000;
+  font-weight: bold;
+  border: none;
+  margin: 0px }
+
+#reference ol li {
+  line-height: 1.6em }
+
+#reference span.title { 
+  font-weight: bold }
+
+/*
+ *  脚注参照
+ */
+.foot4note-reference{
+  font-size: 90%;
+  vertical-align: sup }
+
+table.footnote{
+  border: none;
+  padding: 0px;
+  font-size: 90%;
+  background-color: #ffc;
+  margin: 1.5em 1em 1.5em 7em }
+
+table.footnote tr, table.footnote td{
+  color: #556;
+  background-color: #ffc;
+  border: none; }
+
+table.footnote td.label{
+  background: none;
+  padding: 20px 0px;
+  width: 2em }
+
+table.footnote td{
+  line-height: 1.4em;
+  padding: 28px 10px 10px 35px;
+  background-image: url(./note.jpg);}
+
+/*
+ *  メンバーリスト
+ */
+div.memberlist div {
+  margin: 0px;
+  padding: 0px }
+
+div.memberlist img {
+  float: left;
+  margin: 0px;
+  padding: 10px 0px 0px 0px }
+
+div.memberlist ul {
+  margin: 0px 0px 0px 180px;
+  padding: 0px }
+
+div.memberlist ul em {
+  font-weight: normal;
+  color: #65a;
+  margin-right: 7px }
+
+div.memberlist p {
+  margin-left: 160px }
+
+div.memberlist h2 strong {
+  display: none }
+
+div.memberlisttable ul strong {
+  display: none }
+
+/*
+ *  印刷用
+ */
+@media print {
+  body {
+    font-size: 90%;
+    font-family: "MS PMincho", serif;
+    background-color: #fff;
+    background-image: none;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  #box {
+    background-color: #fff;
+    background-image: none;
+    border: none;
+    padding: 0px;
+    margin: 0px;
+  }
+
+  h1 {
+    font-size: 120%;
+    color: #000;
+    font-family: "MS PGothic", sans-serif;
+  }
+
+  h1.title {
+    font-size: 200%;
+    color: #000;
+    font-family: "MS PGothic", sans-serif;
+  }
+
+  h2 {
+    font-size: 100%;
+    color: #000;
+    border-color: #000;
+    font-family: "MS PGothic", sans-serif;
+  }
+
+  pre, pre.cons, .cons { 
+    color: #000;
+    font-size: x-small;
+    border-width: 0px;
+    margin-left: 1em;
+  }
+
+  ul { 
+    list-style-image: none;
+  }
+
+  em {
+    font-style: normal;
+    font-weight: bold;
+    font-family: "MS PGothic", sans-serif;
+  }
+
+  strong {
+    color: #000;
+    font-family: "MS PGothic", sans-serif;
+    text-decoration: underline;
+  }
+
+}
+
+/*
+ *  Google AdSence
+ */
+div.adsense {
+  float: right;
+  margin: 0 0 5em 0; }
+
+/*
+ *  無くなる予定
+ */
+.com{  /* コマンドライン表記 */
+  font-family: monospace;
+  color: #c55;
+  margin-left: 2em;
+  }
+
+p span.com, .incom{  /* 本文中でコマンド表記 */
+  font-family: monospace;
+  color: #c55;
+  margin-left: 0em;
+  }
+
+.file{  /* ファイル名の表記 */
+  font-family: monospace;
+  color: #363;
+  margin-left: 2em;
+  }
+
+.infile{/* 本文中でのファイル名表記 */
+  font-family: monospace;
+  color: #363;
+  margin-left: 0em }
+
+/*
+ *  なんかよく分からないもの
+ */
+.times09{
+  font-size: 0.9em;
+  }
+
+.times08{
+  font-size: 0.8em;
+  }
+
+.textright{
+  text-align: right;
+  }
+
+.textleft{
+  text-align: left;
+  }
+
+.l_pct{
+  float: left;
+  border: solid 0px #000000;
+  margin: 5px 5px 5px 0px;
+  vertical-align: middle;
+  }
+
+.r_pct{
+  float: right;
+  margin:0px;
+  }
+
+img.left{
+  float: left;
+  margin: 0px;
+  }
+
+img.right{
+  float: right;
+  margin: 0px;
+  }
+
+.dashbox{
+  border-style: dashed;
+  border-width: 2px;
+  margin: 0px;
+  padding: 5px;
+  }
+
+.dashboxm{
+  border-style: dashed;
+  border-width: 2px;
+  margin-left: 2em;
+  padding: 5px;
+  }
+
+.dashboxm1{
+  border-style: dashed;
+  border-width: 2px;
+  margin-left: 1em;
+  padding: 5px;
+  }
+
+.dashbox:hover, .dashboxm:hover, .dashboxm1:hover{
+  border-color: #ff0000;
+  }
+
+img.bm{ /* ボーダーとマージン */
+  border-width: 1px;
+  border-style: solid;
+  vertical-align: middle;
+  margin-left: 2em;
+  }
+

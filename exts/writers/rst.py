@@ -365,7 +365,7 @@ class ReSTTranslator(nodes.NodeVisitor):
         raise nodes.SkipNode
 
     def visit_footnote(self, node):
-        self._footnote = node.children[0].astext().strip()
+        self._footnote = '*' #node.children[0].astext().strip()
         self.new_state(len(self._footnote) + 3)
     def depart_footnote(self, node):
         self.end_state(first='.. [%s] ' % self._footnote)
@@ -751,9 +751,10 @@ class ReSTTranslator(nodes.NodeVisitor):
         pass
 
     def visit_reference(self, node):
-        if 'refuri' in node and self.links.get(node['refuri'], None) is None:
-	  self.links[node['refuri']] = node
-	self.add_text( " %s_ " % node.children[0].astext())
+        text = node.children[0].astext()
+        if 'refuri' in node and self.links.get(text, None) is None:
+	  self.links[text] = node
+	self.add_text( " %s_ " % text)
     def depart_reference(self, node):
         pass
 
@@ -871,11 +872,8 @@ class ReSTTranslator(nodes.NodeVisitor):
        self.add_text(" $%s$ " % node['latex'])
        raise nodes.SkipNode
     def visit_displaymath(self, node):
-       self.add_text("<tex>")
-       self.new_state()
-       self.add_text(node['latex'])
-       self.end_state()
-       self.add_text("</tex>" + os.linesep)
+       self.states[-1].append(
+                (0, ['<tex>', node['latex'].rstrip(), '</tex>', '']))
        raise nodes.SkipNode
 
     def text_visit_eqref(self, node):

@@ -2,7 +2,7 @@
 from writers.hooktail import HTMLTranslator, \
      SmartyPantsHTMLTranslator
 from sphinx.builders.html import StandaloneHTMLBuilder
-
+import mathjax
 class HooktailBuilder(StandaloneHTMLBuilder):
     name = 'hooktail'
     def __init__(self, app):
@@ -16,3 +16,6 @@ class HooktailBuilder(StandaloneHTMLBuilder):
             self.translator_class = SmartyPantsHTMLTranslator
         else:
             self.translator_class = HTMLTranslator
+    def write_doc(self, docname, doctree):
+        mathjax.counter = mathjax.ExpressionNumbers()
+        StandaloneHTMLBuilder.write_doc(self, docname, doctree)

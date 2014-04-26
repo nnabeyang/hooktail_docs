@@ -3,15 +3,23 @@ from docutils import nodes
 from sphinx.application import ExtensionError
 from sphinx.ext.mathbase import setup_math as mathbase_setup,\
 		                math, displaymath, eqref
-
+import re
+class ExpressionNumbers(object):
+    def __init__(self, start=1):
+        self.count = start - 1
+    def __call__(self, match):
+        self.count += 1
+        return "\\tag{%d}" % self.count
+counter = ExpressionNumbers()
+tagRegex = re.compile(re.escape("\\tag{##}"), re.S | re.M)
 def html_visit_math(self, node):
     self.body.append(self.starttag(node, 'span', '', CLASS='math'))
     self.body.append(self.builder.config.mathjax_inline[0] +
                      self.encode(node['latex']) +
                      self.builder.config.mathjax_inline[1] + '</span>')
     raise nodes.SkipNode
-
 def html_visit_displaymath(self, node):
+    node['latex'] = re.sub(tagRegex, counter, node['latex'])
     self.body.append(self.starttag(node, 'div', CLASS='math'))
     if node['nowrap']:
         self.body.append(self.builder.config.mathjax_display[0] +

@@ -60,7 +60,7 @@ class ReSTBuilder(TextBuilder):
 		relations = self.env.collect_relations().get(docname)
 		if relations and relations[0] and relations[0] != "index":
 		  f.write("@@category:%s@@%s" % (self.categories[relations[0]], linesep))
-		f.write("@@id:%s@@%s" % (docname.replace('/', '_'), linesep))
+		f.write("@@id:%s@@%s" % (docname.split('/')[-1], linesep))
             finally:
                 f.close()
         except (IOError, OSError) as err:
